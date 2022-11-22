@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+int main()
+{   float min , max;
+    float grade;
+    float mean_value;
+    float result =0 ;
+   
+   
+   for (int i = 0; i < 10; i++){
+       scanf("%f" ,&grade);
+       result += grade;
+       if (i==0) {
+           min=grade;
+           max=grade;
+           
+       }
+    else {
+        if (grade<min) min=grade;
+        if (grade>max) max=grade;
+       
+    }
+    } 
+    printf("The mean_value is: ");
+     mean_value = result / 10 ;
+     
+     float result1;
+    float result2;
+    result1 = mean_value-min;
+    result2 = mean_value-max;
+   
+     printf("%f\n" , mean_value);
+     printf("%f\n%f",min,max);
+      printf("\n%f\n%f",result1,result2);
+     
+}
